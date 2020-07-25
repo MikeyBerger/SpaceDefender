@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Fire
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Ground
+  - Enemy
+  - Tower
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 363720673
+    locked: 0
+  - name: Enemy
+    uniqueID: 180775199
+    locked: 0
+  - name: PlayerBody
+    uniqueID: 77816681
+    locked: 0
+  - name: Weapon
+    uniqueID: 519996865
+    locked: 0
+  - name: PlayerArm
+    uniqueID: 3918664695
+    locked: 0
+  - name: Platform
+    uniqueID: 69590457
+    locked: 0
+  - name: FG
+    uniqueID: 1160646123
+    locked: 0
