@@ -44,13 +44,13 @@ public class Weapon : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                SingleFire();
+               // SingleFire();
                 Shoot();
                
             }else if(Input.GetButton("Fire1") && Time.time > TimeToFire)
             {
                 TimeToFire = Time.time + 1 / FireRate;
-                RapidFire();
+               // RapidFire();
                 Shoot();
                
             }

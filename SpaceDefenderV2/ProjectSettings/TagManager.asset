@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,31 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 3842681041
+    locked: 0
+  - name: PlayerBody
+    uniqueID: 3317321881
+    locked: 0
+  - name: Weapon
+    uniqueID: 3097188697
+    locked: 0
+  - name: PlayerArm
+    uniqueID: 3863449821
+    locked: 0
+  - name: PinkMountains
+    uniqueID: 1441957393
+    locked: 0
+  - name: GreyMountains
+    uniqueID: 2990501975
+    locked: 0
+  - name: Towers
+    uniqueID: 2017252625
+    locked: 0
+  - name: Enemy
+    uniqueID: 2058543743
+    locked: 0
+  - name: FG
+    uniqueID: 2723286265
     locked: 0
