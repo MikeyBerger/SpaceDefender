@@ -16,7 +16,10 @@ public class Weapon : MonoBehaviour
 #pragma warning restore IDE0051 // Remove unused private members
     public float MaxSize;
     public float MinSize;
-
+    private Enemy1 E1;
+    private Enemy2 E2;
+    public bool HitEnemy = false;
+   // public float HitTimer;
 
 #pragma warning disable IDE0051 // Remove unused private members
     IEnumerator EffectDelay()
@@ -25,7 +28,13 @@ public class Weapon : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
-
+    /*
+    IEnumerator MissedEnemy()
+    {
+        yield return new WaitForSeconds(HitTimer);
+        HitEnemy = false;
+    }
+    */
 
     // Start is called before the first frame update
     void Start()
@@ -80,6 +89,14 @@ public class Weapon : MonoBehaviour
         {
             Debug.DrawLine(FirePointPos, Hit.point, Color.red);
         }
+        
+        if(Hit.collider.gameObject.tag == "Enemy")
+        {
+            HitEnemy = true;
+            Debug.Log("Enemy hit");
+            //StartCoroutine(MissedEnemy());
+        }
+        
     }
 
 }

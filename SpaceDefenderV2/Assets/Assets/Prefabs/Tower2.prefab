@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1938750946956954212}
   - component: {fileID: 2599856908118224849}
   - component: {fileID: 6173150201974046008}
+  - component: {fileID: 8762101645381397468}
   m_Layer: 0
   m_Name: Tower2
   m_TagString: Tower2
@@ -112,7 +113,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 986524118913350499}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 664f565b88c4f425c8d1a898f35a8d37, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -129,3 +130,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &8762101645381397468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986524118913350499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d2d1f267e7344a09ecafbab2ca8d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100

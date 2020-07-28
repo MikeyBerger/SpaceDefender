@@ -108,6 +108,8 @@ MonoBehaviour:
     type: 3}
   MaxSize: 1
   MinSize: 0.6
+  HitEnemy: 0
+  HitTimer: 5
 --- !u!1 &293049765866881825
 GameObject:
   m_ObjectHideFlags: 0
