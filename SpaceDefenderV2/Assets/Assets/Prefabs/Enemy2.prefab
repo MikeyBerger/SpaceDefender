@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1852352779752654499}
   - component: {fileID: 5197120797498982254}
   - component: {fileID: 7553647614315995318}
+  - component: {fileID: 3038818376168029808}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -72,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2058543743
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -8886561572535021830, guid: 879349f792a0045d6b0a4a097ef817a0,
     type: 3}
@@ -125,6 +126,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   HasStopped: 0
   Anim: {fileID: 0}
+  _Weapon: {fileID: 0}
 --- !u!50 &5197120797498982254
 Rigidbody2D:
   serializedVersion: 4
@@ -165,6 +167,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3038818376168029808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795207929291387998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00031fd925a504ff5bc5c3ce9cb605f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageMat: {fileID: 2100000, guid: b626e30b77448459ab3a3247a1b4bf31, type: 2}
+  DefaultMat: {fileID: 2100000, guid: c4a717899f2c040e1b65af84bee1fbd4, type: 2}
+  ChangeTimer: 10
 --- !u!1 &4795207930078563018
 GameObject:
   m_ObjectHideFlags: 0

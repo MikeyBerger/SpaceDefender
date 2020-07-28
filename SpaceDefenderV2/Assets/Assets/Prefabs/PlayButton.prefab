@@ -125,7 +125,7 @@ Animator:
   m_GameObject: {fileID: 1419615504333161084}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a5d708624b30c43f78c3acc82ee04473, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScaleSize: 44
+  SceneName: SampleScene1
 --- !u!1 &1419615504596859478
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScaleSize: 1.5
+  SceneName: SampleScene1
 --- !u!1 &1419615505160671342
 GameObject:
   m_ObjectHideFlags: 0

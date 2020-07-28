@@ -8,6 +8,7 @@ TagManager:
   - Tower1
   - Tower2
   - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -66,11 +67,11 @@ TagManager:
   - name: Towers
     uniqueID: 2017252625
     locked: 0
-  - name: Enemy
-    uniqueID: 2058543743
-    locked: 0
   - name: FG
     uniqueID: 2723286265
+    locked: 0
+  - name: Enemy
+    uniqueID: 2058543743
     locked: 0
   - name: Explosion
     uniqueID: 2529406023

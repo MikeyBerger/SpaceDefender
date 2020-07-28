@@ -19,6 +19,8 @@ public class Weapon : MonoBehaviour
     private Enemy1 E1;
     private Enemy2 E2;
     public bool HitEnemy = false;
+    private EnemyAnim EA;
+
    // public float HitTimer;
 
 #pragma warning disable IDE0051 // Remove unused private members
@@ -39,7 +41,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -63,6 +65,11 @@ public class Weapon : MonoBehaviour
                 Shoot();
                
             }
+        }
+
+        if(HitEnemy == true)
+        {
+            
         }
     }
 
@@ -93,8 +100,9 @@ public class Weapon : MonoBehaviour
         if(Hit.collider.gameObject.tag == "Enemy")
         {
             HitEnemy = true;
-            Debug.Log("Enemy hit");
+            //Debug.Log("Enemy hit");
             //StartCoroutine(MissedEnemy());
+            
         }
         
     }
