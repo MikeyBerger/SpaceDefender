@@ -151,9 +151,10 @@ MonoBehaviour:
   FireRate: 0
   FireRateLimit: 250
   ShootPoint: {fileID: 1583718048837283752}
-  Bullet: {fileID: 4072057849889999788, guid: 30295cbd2686a4a8cb73422e3cd9a14b, type: 3}
+  Bullet: {fileID: 7146061214037422529, guid: 0c5314d1160304b99bd6b253c106f916, type: 3}
   Target: {fileID: 0}
   HasStopped: 0
+  Anim: {fileID: 0}
 --- !u!50 &7801051662122483208
 Rigidbody2D:
   serializedVersion: 4
