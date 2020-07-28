@@ -15,7 +15,7 @@ public class Enemy2 : MonoBehaviour
     public Transform Target;
     public bool HasStopped;
     public Animator Anim;
-    private Weapon _Weapon;
+    public Weapon _Weapon;
 
     // Start is called before the first frame update
     void Start()
@@ -47,13 +47,5 @@ public class Enemy2 : MonoBehaviour
             FireRate = 0;
         }
 
-        if (_Weapon.HitEnemy == true)
-        {
-            Anim.SetBool("WasHit", true);
-        }
-        else
-        {
-            Anim.SetBool("WasHit", false);
-        }
     }
 }

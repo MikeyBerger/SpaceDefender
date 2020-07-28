@@ -72,3 +72,12 @@ TagManager:
   - name: FG
     uniqueID: 2723286265
     locked: 0
+  - name: Explosion
+    uniqueID: 2529406023
+    locked: 0
+  - name: Buttons
+    uniqueID: 2405743809
+    locked: 0
+  - name: Words
+    uniqueID: 1951432561
+    locked: 0
