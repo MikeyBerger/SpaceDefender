@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 5409378950130337492}
   m_Layer: 0
   m_Name: Enemy1
-  m_TagString: Enemy
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,8 +155,6 @@ MonoBehaviour:
   Bullet: {fileID: 7146061214037422529, guid: 0c5314d1160304b99bd6b253c106f916, type: 3}
   Target: {fileID: 0}
   HasStopped: 0
-  Anim: {fileID: 0}
-  _Weapon: {fileID: 0}
 --- !u!50 &7801051662122483208
 Rigidbody2D:
   serializedVersion: 4

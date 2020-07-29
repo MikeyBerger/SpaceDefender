@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy1 : MonoBehaviour
 {
-    public float Health;
+    public int Health;
     public float Speed;
     public float StopDistance;
     public float FireRate;
@@ -12,16 +12,19 @@ public class Enemy1 : MonoBehaviour
     public Transform ShootPoint;
     public Transform Bullet;
     public Transform Target;
-    public bool HasStopped;
-    public Animator Anim;
-    public Weapon _Weapon;
+   // public bool HasStopped;
+   
+
 
     // Start is called before the first frame update
     void Start()
     {
-        Anim = GetComponent<Animator>();
+        
         Target = GameObject.FindGameObjectWithTag("Tower1").GetComponent<Transform>();
-        _Weapon = GetComponent<Weapon>();
+        if(Target == null)
+        {
+            Target = GameObject.FindGameObjectWithTag("Tower2").GetComponent<Transform>();
+        }
         
     }
 
@@ -36,14 +39,16 @@ public class Enemy1 : MonoBehaviour
         } else if(Vector2.Distance(transform.position, Target.position) < StopDistance)
         {
             transform.position = transform.position;
-            HasStopped = true;
+            //HasStopped = true;
         }
 
 
-        if(FireRate >= FireRateLimit && HasStopped == true)
+        if(FireRate >= FireRateLimit /*&& HasStopped == true*/)
         {
             Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
             FireRate = 0;
         }
+
+        
     }
 }

@@ -7,6 +7,18 @@ public class Tower : MonoBehaviour
     public int Health;
     private int Damage;
     public Transform Explosion;
+    public float RestorationTimer;
+    private int RegenHealth;
+    public int MaxRegen;
+    public int MinRegen;
+    public int MaxDamage;
+    public int MinDamage;
+
+    IEnumerator RestoreHealth()
+    {
+        yield return new WaitForSeconds(RestorationTimer);
+        Health = Health + RegenHealth;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -17,12 +29,15 @@ public class Tower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Damage = Random.Range(5, 15);
+        RegenHealth = Random.Range(MinRegen, MaxRegen);
+        Damage = Random.Range(MinDamage, MaxDamage);
 
         if(Health <= 0)
         {
             Destroy(transform.gameObject);
         }
+
+        StartCoroutine(RestoreHealth());
     }
 
     /*

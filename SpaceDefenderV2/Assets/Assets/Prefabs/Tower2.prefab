@@ -145,3 +145,8 @@ MonoBehaviour:
   Health: 100
   Explosion: {fileID: 661639453487505676, guid: cabea1b94e0b945109964c3e05d84a23,
     type: 3}
+  RestorationTimer: 200
+  MaxRegen: 1
+  MinRegen: 5
+  MaxDamage: 15
+  MinDamage: 30
