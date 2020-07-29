@@ -20,6 +20,8 @@ public class Weapon : MonoBehaviour
     private Enemy2 E2;
     public bool HitEnemy = false;
     private EnemyAnim EA;
+    public Material Mat;
+    
 
    // public float HitTimer;
 
@@ -41,7 +43,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+         
     }
 
     // Update is called once per frame

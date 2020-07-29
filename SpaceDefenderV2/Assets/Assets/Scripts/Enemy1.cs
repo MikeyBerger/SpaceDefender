@@ -45,6 +45,5 @@ public class Enemy1 : MonoBehaviour
             Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
             FireRate = 0;
         }
-
     }
 }

@@ -45,7 +45,7 @@ public class Tower : MonoBehaviour
         {
             Health = Health - Damage;
             //Debug.Log("Tower was hit!");
-            //Instantiate(Explosion, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
+            Instantiate(Explosion, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
             Destroy(collision.gameObject);
 
         }
