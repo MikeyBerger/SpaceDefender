@@ -111,16 +111,16 @@ public class Weapon : MonoBehaviour
         
         if(Hit.collider.gameObject.tag == "Enemy1")
         {
-            HitEnemy = true;
-            Debug.Log("Enemy1 hit");
-            TargetHitCount = 0;
+            //HitEnemy = true;
+            //Debug.Log("Enemy1 hit");
+            //TargetHitCount = 0;
             //StartCoroutine(MissedEnemy());
             //DamageEnemy1();
             //GS.stats.EnemyHealth = GS.stats.EnemyHealth - Damage;
             // Enemy1HitCount = Enemy1HitCount + 1;
-            //  Instantiate(Sparks, HitPos, Sparks.rotation);
+            Instantiate(Sparks, HitPos, Sparks.rotation);
 
-            E1.Health = E1.Health - E1.Damage;
+            //E1.Health = E1.Health - E1.Damage;
 
             if (Enemy1HitCount >= 4)
             {
@@ -129,15 +129,15 @@ public class Weapon : MonoBehaviour
         }
         else if (Hit.collider.gameObject.tag == "Enemy2")
         {
-            HitEnemy = true;
-            Debug.Log("Enemy2 hit");
+            //HitEnemy = true;
+            //Debug.Log("Enemy2 hit");
             //StartCoroutine(MissedEnemy());
             //DamageEnemy1();
             //GS.stats.EnemyHealth = GS.stats.EnemyHealth - Damage;
             // Enemy2HitCount = Enemy2HitCount + 1;
-            // Instantiate(Sparks, HitPos, Sparks.rotation);
+             Instantiate(Sparks, HitPos, Sparks.rotation);
 
-            E2.Health = E2.Health - Damage;
+            //E2.Health = E2.Health - Damage;
 
             if (Enemy2HitCount >= 4)
             {

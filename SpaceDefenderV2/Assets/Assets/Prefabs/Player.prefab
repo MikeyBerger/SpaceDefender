@@ -106,7 +106,7 @@ MonoBehaviour:
   Bullet: {fileID: 1617256602525021628, guid: 562b00a6dc61f44dc81ae75108b0542d, type: 3}
   MuzzleFlash: {fileID: 4012283153488948772, guid: 71e68c08474d942b5ba4cc9991c6066e,
     type: 3}
-  Sparks: {fileID: 0}
+  Sparks: {fileID: 1387802260988191679, guid: 7ccf2c9ac7bea4600b8f993e9808cf08, type: 3}
   MaxSize: 1
   MinSize: 0.6
   HitEnemy: 0
