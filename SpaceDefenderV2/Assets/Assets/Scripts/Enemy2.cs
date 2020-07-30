@@ -7,6 +7,9 @@ public class Enemy2 : MonoBehaviour
 
     public float Health;
     public float Speed;
+    public int Damage;
+    public int MinDamage;
+    public int MaxDamage;
     public float StopDistance;
     public float FireRate;
     public float FireRateLimit;
@@ -33,6 +36,13 @@ public class Enemy2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Damage = Random.Range(MinDamage, MaxDamage);
+
+        if (Health <= 0)
+        {
+            Destroy(transform.gameObject);
+        }
+
         FireRate++;
 
         if (Vector2.Distance(transform.position, Target.position) > StopDistance)
@@ -52,5 +62,9 @@ public class Enemy2 : MonoBehaviour
             FireRate = 0;
         }
 
+        
+
+
     }
+
 }

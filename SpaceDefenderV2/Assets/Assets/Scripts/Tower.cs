@@ -14,11 +14,14 @@ public class Tower : MonoBehaviour
     public int MaxDamage;
     public int MinDamage;
 
+
     IEnumerator RestoreHealth()
     {
         yield return new WaitForSeconds(RestorationTimer);
         Health = Health + RegenHealth;
     }
+
+
 
     // Start is called before the first frame update
     void Start()

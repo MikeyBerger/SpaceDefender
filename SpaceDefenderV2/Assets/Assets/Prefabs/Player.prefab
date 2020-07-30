@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1197778599
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -3355605324767024174, guid: 4ec5ed64531e34659b9457483a49a069,
     type: 3}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f9fc6305eaf441abe63323dac7bab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 100
   FireRate: 0
   NotToHit:
     serializedVersion: 2
@@ -106,10 +106,13 @@ MonoBehaviour:
   Bullet: {fileID: 1617256602525021628, guid: 562b00a6dc61f44dc81ae75108b0542d, type: 3}
   MuzzleFlash: {fileID: 4012283153488948772, guid: 71e68c08474d942b5ba4cc9991c6066e,
     type: 3}
+  Sparks: {fileID: 0}
   MaxSize: 1
   MinSize: 0.6
   HitEnemy: 0
-  HitTimer: 5
+  Enemy1HitCount: 0
+  Enemy2HitCount: 0
+  TargetHitCount: 0
 --- !u!1 &293049765866881825
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +427,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -431517475
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 2429855376248430252, guid: 4ec5ed64531e34659b9457483a49a069,
     type: 3}
@@ -519,7 +522,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -977645415
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -7292798746301496257, guid: 4ec5ed64531e34659b9457483a49a069,
     type: 3}

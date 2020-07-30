@@ -51,6 +51,12 @@ TagManager:
   - name: BG
     uniqueID: 3842681041
     locked: 0
+  - name: PinkMountains
+    uniqueID: 1441957393
+    locked: 0
+  - name: GreyMountains
+    uniqueID: 2990501975
+    locked: 0
   - name: PlayerBody
     uniqueID: 3317321881
     locked: 0
@@ -59,12 +65,6 @@ TagManager:
     locked: 0
   - name: PlayerArm
     uniqueID: 3863449821
-    locked: 0
-  - name: PinkMountains
-    uniqueID: 1441957393
-    locked: 0
-  - name: GreyMountains
-    uniqueID: 2990501975
     locked: 0
   - name: Towers
     uniqueID: 2017252625

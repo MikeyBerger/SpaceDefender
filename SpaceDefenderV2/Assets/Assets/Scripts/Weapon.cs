@@ -22,10 +22,15 @@ public class Weapon : MonoBehaviour
     private EnemyAnim EA;
     public int Enemy1HitCount;
     public int Enemy2HitCount;
+    private Transform Target;
+    public int TargetHitCount;
+    private Enemy1 E1;
+    private Enemy2 E2;
 
-    
 
-   // public float HitTimer;
+
+
+    // public float HitTimer;
 
 #pragma warning disable IDE0051 // Remove unused private members
     IEnumerator EffectDelay()
@@ -41,6 +46,12 @@ public class Weapon : MonoBehaviour
         HitEnemy = false;
     }
     */
+
+    private void Awake()
+    {
+        E1 = GameObject.FindObjectOfType<Enemy1>();
+        E2 = GameObject.FindObjectOfType<Enemy2>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -102,11 +113,14 @@ public class Weapon : MonoBehaviour
         {
             HitEnemy = true;
             Debug.Log("Enemy1 hit");
+            TargetHitCount = 0;
             //StartCoroutine(MissedEnemy());
             //DamageEnemy1();
             //GS.stats.EnemyHealth = GS.stats.EnemyHealth - Damage;
-            Enemy1HitCount = Enemy1HitCount + 1;
-            Instantiate(Sparks, HitPos, Sparks.rotation);
+            // Enemy1HitCount = Enemy1HitCount + 1;
+            //  Instantiate(Sparks, HitPos, Sparks.rotation);
+
+            E1.Health = E1.Health - E1.Damage;
 
             if (Enemy1HitCount >= 4)
             {
@@ -120,8 +134,10 @@ public class Weapon : MonoBehaviour
             //StartCoroutine(MissedEnemy());
             //DamageEnemy1();
             //GS.stats.EnemyHealth = GS.stats.EnemyHealth - Damage;
-            Enemy2HitCount = Enemy2HitCount + 1;
-            Instantiate(Sparks, HitPos, Sparks.rotation);
+            // Enemy2HitCount = Enemy2HitCount + 1;
+            // Instantiate(Sparks, HitPos, Sparks.rotation);
+
+            E2.Health = E2.Health - Damage;
 
             if (Enemy2HitCount >= 4)
             {
