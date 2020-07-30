@@ -49,8 +49,8 @@ public class Weapon : MonoBehaviour
 
     private void Awake()
     {
-        E1 = GameObject.FindObjectOfType<Enemy1>();
-        E2 = GameObject.FindObjectOfType<Enemy2>();
+        E1 = GameObject.FindGameObjectWithTag("Enemy1").GetComponent<Enemy1>();
+        E2 = GameObject.FindGameObjectWithTag("Enemy2").GetComponent<Enemy2>();
     }
 
     // Start is called before the first frame update
