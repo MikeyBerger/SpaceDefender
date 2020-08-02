@@ -113,6 +113,8 @@ MonoBehaviour:
   Enemy1HitCount: 0
   Enemy2HitCount: 0
   TargetHitCount: 0
+  ShotMusic: {fileID: 5149029225043972929, guid: e0b1b91217208477d945aa619854d0a4,
+    type: 3}
 --- !u!1 &293049765866881825
 GameObject:
   m_ObjectHideFlags: 0

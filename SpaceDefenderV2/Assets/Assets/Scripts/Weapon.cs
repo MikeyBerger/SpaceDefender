@@ -26,6 +26,7 @@ public class Weapon : MonoBehaviour
     public int TargetHitCount;
     private Enemy1 E1;
     private Enemy2 E2;
+    public Transform ShotMusic;
 
 
 
@@ -100,6 +101,7 @@ public class Weapon : MonoBehaviour
         Vector2 FirePointPos = new Vector2(FirePoint.position.x, FirePoint.position.y);
         Instantiate(Bullet, FirePoint.position, FirePoint.rotation);
         Instantiate(MuzzleFlash, FirePoint.position, FirePoint.rotation);
+        Instantiate(ShotMusic, transform.position, transform.rotation);
         RaycastHit2D Hit = Physics2D.Raycast(FirePointPos, MousePos - FirePointPos, 100);
         Debug.DrawLine(FirePointPos, (MousePos - FirePointPos) * 100);
         Vector2 HitPos = new Vector2(Hit.transform.position.x, Hit.transform.position.y);
@@ -137,6 +139,7 @@ public class Weapon : MonoBehaviour
             // Enemy2HitCount = Enemy2HitCount + 1;
              Instantiate(Sparks, HitPos, Sparks.rotation);
 
+
             //E2.Health = E2.Health - Damage;
 
             if (Enemy2HitCount >= 4)
@@ -144,6 +147,8 @@ public class Weapon : MonoBehaviour
                 Destroy(Hit.transform.gameObject);
             }
         }
+
+        //Debug.Log(Hit.transform.gameObject);
 
     }
 

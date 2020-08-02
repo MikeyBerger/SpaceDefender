@@ -8,6 +8,7 @@ public class EnemyAnim : MonoBehaviour
     public Material DamageMat;
     public Material DefaultMat;
     public float ChangeTimer;
+    public int HitCount = 0;
 
     IEnumerator ResetColor()
     {
@@ -26,7 +27,10 @@ public class EnemyAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(HitCount >= 4)
+        {
+            Destroy(transform.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,8 +41,9 @@ public class EnemyAnim : MonoBehaviour
             Debug.Log("Color Should Change!!!");
             SR.sharedMaterial = DamageMat;
             StartCoroutine(ResetColor());
-            
+            HitCount = HitCount + 1;
         }
 
     }
+
 }

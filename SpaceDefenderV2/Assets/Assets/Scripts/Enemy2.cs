@@ -67,4 +67,20 @@ public class Enemy2 : MonoBehaviour
 
     }
 
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Sparks")
+        {
+            Debug.Log("Enemy2 Hit");
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Sparks")
+        {
+            Debug.Log("Enemy2 Hit");
+        }
+    }
+
 }
