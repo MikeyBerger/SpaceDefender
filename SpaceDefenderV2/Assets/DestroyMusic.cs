@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletCollision : MonoBehaviour
+public class DestroyMusic : MonoBehaviour
 {
+    public float SDT;
+    public float Limit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,14 +16,11 @@ public class BulletCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        SDT++;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Enemy1")
+        if(SDT >= Limit)
         {
-            Debug.Log("Bullet Collision Works");
+            Destroy(transform.gameObject);
         }
     }
 }

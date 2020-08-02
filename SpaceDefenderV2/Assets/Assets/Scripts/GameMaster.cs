@@ -7,7 +7,7 @@ public class GameMaster : MonoBehaviour
 {
     private Transform Tower1;
     private Transform Tower2;
-    private string GameOverScene = "GameOver";
+    public string GameOverScene;
 
 
     // Start is called before the first frame update
@@ -25,8 +25,8 @@ public class GameMaster : MonoBehaviour
 
         if(Tower1 == null && Tower2 == null)
         {
-            Debug.LogError("IT'S GAME OVER MAN!!");
-            //SceneManager.LoadScene(GameOverScene);
+            //Debug.LogError("IT'S GAME OVER MAN!!");
+            SceneManager.LoadScene(GameOverScene);
         }
 
     }

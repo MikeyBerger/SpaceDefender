@@ -148,5 +148,6 @@ MonoBehaviour:
   RestorationTimer: 200
   MaxRegen: 1
   MinRegen: 5
-  MaxDamage: 15
-  MinDamage: 30
+  MaxDamage: 10
+  MinDamage: 15
+  HBS: {fileID: 0}

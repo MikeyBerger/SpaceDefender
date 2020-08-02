@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5149029225043972929}
   - component: {fileID: 2454313288638636084}
+  - component: {fileID: 854415103120646018}
   m_Layer: 0
   m_Name: ShotMusic
   m_TagString: Untagged
@@ -127,3 +128,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &854415103120646018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6650359618726953617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4b24995e57949c9a12d49f687b9f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SDT: 0
+  Limit: 75

@@ -30,9 +30,6 @@ public class Weapon : MonoBehaviour
 
 
 
-
-    // public float HitTimer;
-
 #pragma warning disable IDE0051 // Remove unused private members
     IEnumerator EffectDelay()
 #pragma warning restore IDE0051 // Remove unused private members
@@ -83,8 +80,21 @@ public class Weapon : MonoBehaviour
             }
         }
 
+        #region No Target
+        if (E1 == null)
+        {
+            E1 = null;
+        }
+
+        if(E2 == null)
+        {
+            E2 = null;
+        }
+        #endregion
     }
 
+
+    #region Power-Ups
     void SingleFire()
     {
         Debug.Log("Player is shooting single fire");
@@ -94,7 +104,10 @@ public class Weapon : MonoBehaviour
     {
         Debug.Log("Player is shooting rapid fire");
     }
+    #endregion
 
+
+    #region Regular Shooting
     public void Shoot()
     {
         Vector2 MousePos = new Vector2(Camera.main.ScreenToWorldPoint (Input.mousePosition).x, Camera.main.ScreenToWorldPoint (Input.mousePosition).y);
@@ -115,41 +128,22 @@ public class Weapon : MonoBehaviour
         {
             //HitEnemy = true;
             //Debug.Log("Enemy1 hit");
-            //TargetHitCount = 0;
             //StartCoroutine(MissedEnemy());
-            //DamageEnemy1();
-            //GS.stats.EnemyHealth = GS.stats.EnemyHealth - Damage;
-            // Enemy1HitCount = Enemy1HitCount + 1;
             Instantiate(Sparks, HitPos, Sparks.rotation);
 
-            //E1.Health = E1.Health - E1.Damage;
-
-            if (Enemy1HitCount >= 4)
-            {
-                Destroy(Hit.transform.gameObject);
-            }
         }
         else if (Hit.collider.gameObject.tag == "Enemy2")
         {
             //HitEnemy = true;
             //Debug.Log("Enemy2 hit");
             //StartCoroutine(MissedEnemy());
-            //DamageEnemy1();
-            //GS.stats.EnemyHealth = GS.stats.EnemyHealth - Damage;
-            // Enemy2HitCount = Enemy2HitCount + 1;
-             Instantiate(Sparks, HitPos, Sparks.rotation);
+            Instantiate(Sparks, HitPos, Sparks.rotation);
 
-
-            //E2.Health = E2.Health - Damage;
-
-            if (Enemy2HitCount >= 4)
-            {
-                Destroy(Hit.transform.gameObject);
-            }
         }
 
-        //Debug.Log(Hit.transform.gameObject);
+        
 
     }
+    #endregion
 
 }

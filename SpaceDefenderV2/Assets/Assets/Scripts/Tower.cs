@@ -13,7 +13,7 @@ public class Tower : MonoBehaviour
     public int MinRegen;
     public int MaxDamage;
     public int MinDamage;
-
+    public HealthBarScript HBS;
 
     IEnumerator RestoreHealth()
     {
@@ -26,7 +26,7 @@ public class Tower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        HBS.SetMaxHealth(Health);
     }
 
     // Update is called once per frame
@@ -62,6 +62,7 @@ public class Tower : MonoBehaviour
         if (collision.gameObject.transform.tag == "Fire")
         {
             Health = Health - Damage;
+            HBS.SetHealth(Health - Damage);
             //Debug.Log("Tower was hit!");
             Instantiate(Explosion, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
             Destroy(collision.gameObject);
