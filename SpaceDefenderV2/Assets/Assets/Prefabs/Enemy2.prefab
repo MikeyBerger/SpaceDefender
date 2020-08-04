@@ -123,10 +123,11 @@ MonoBehaviour:
   MaxDamage: 30
   StopDistance: 1
   FireRate: 0
-  FireRateLimit: 250
+  FireRateLimit: 400
   ShootPoint: {fileID: 4795207930078563021}
   Bullet: {fileID: 3655203494863565118, guid: b2b6eeaab02a543b0bc8d7765cb18453, type: 3}
   Target: {fileID: 0}
+  WaitTime: 7
 --- !u!50 &5197120797498982254
 Rigidbody2D:
   serializedVersion: 4
@@ -182,6 +183,7 @@ MonoBehaviour:
   DamageMat: {fileID: 2100000, guid: b626e30b77448459ab3a3247a1b4bf31, type: 2}
   DefaultMat: {fileID: 2100000, guid: c4a717899f2c040e1b65af84bee1fbd4, type: 2}
   ChangeTimer: 1
+  HitCount: 0
 --- !u!1 &4795207930078563018
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,9 +16,15 @@ public class Enemy2 : MonoBehaviour
     public Transform ShootPoint;
     public Transform Bullet;
     public Transform Target;
+    public float WaitTime;
     // public bool HasStopped;
 
 
+    IEnumerator Shoot()
+    {
+        yield return new WaitForSeconds(WaitTime);
+        Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +35,7 @@ public class Enemy2 : MonoBehaviour
         if(Target == null)
         {
             Target = GameObject.FindGameObjectWithTag("Tower1").GetComponent<Transform>();
+            Target = null;
         }
      
     }
@@ -45,11 +52,11 @@ public class Enemy2 : MonoBehaviour
 
         FireRate++;
 
-        if (Vector2.Distance(transform.position, Target.position) > StopDistance)
+        if (Vector2.Distance(transform.position, Target.position) > StopDistance && Target != null)
         {
             transform.position = Vector2.MoveTowards(transform.position, Target.position, Speed * Time.deltaTime);
         }
-        else if (Vector2.Distance(transform.position, Target.position) < StopDistance)
+        else if (Vector2.Distance(transform.position, Target.position) < StopDistance && Target != null)
         {
             transform.position = transform.position;
            //HasStopped = true;
@@ -58,6 +65,7 @@ public class Enemy2 : MonoBehaviour
 
         if (FireRate >= FireRateLimit /*&& HasStopped == true*/)
         {
+            //StartCoroutine(Shoot());
             Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
             FireRate = 0;
         }
