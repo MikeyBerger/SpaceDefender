@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class ButtonAnim : MonoBehaviour
 {
     
-    //public Transform Button;
-    public float ScaleSize;
+ 
     public string SceneName;
+    public float ScaleSizeX;
+    public float ScaleSizeY;
+
 
 
     // Start is called before the first frame update
@@ -26,17 +28,23 @@ public class ButtonAnim : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        transform.localScale = new Vector3(5, 2.5f, 1) * ScaleSize;
+        transform.localScale = new Vector3(ScaleSizeX, ScaleSizeY, 0);
         
     }
 
     private void OnMouseExit()
     {
-        transform.localScale = new Vector3(10, 5, 1) / ScaleSize;
+        transform.localScale = new Vector3(2, 0.5f, 0);
     }
 
     private void OnMouseDown()
     {
         SceneManager.LoadScene(SceneName);
+    }
+
+
+    private void OnMouseOver()
+    {
+        transform.localScale = new Vector3(ScaleSizeX, ScaleSizeY, 0);
     }
 }

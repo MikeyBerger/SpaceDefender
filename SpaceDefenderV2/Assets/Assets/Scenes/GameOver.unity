@@ -401,6 +401,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f681f94a8c0fd48a3806001831b5a176, type: 3}
+--- !u!1001 &2387679166017035729
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6549404102968029023, guid: f1fbe3b765d234bbfa96a151892b338a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549404102968029023, guid: f1fbe3b765d234bbfa96a151892b338a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549404102968029023, guid: f1fbe3b765d234bbfa96a151892b338a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549404102968029023, guid: f1fbe3b765d234bbfa96a151892b338a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549404102968029023, guid: f1fbe3b765d234bbfa96a151892b338a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549404102968029023, guid: f1fbe3b765d234bbfa96a151892b338a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549404102968029023, guid: f1fbe3b765d234bbfa96a151892b338a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549404102968029023, guid: f1fbe3b765d234bbfa96a151892b338a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549404102968029023, guid: f1fbe3b765d234bbfa96a151892b338a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549404102968029023, guid: f1fbe3b765d234bbfa96a151892b338a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549404102968029023, guid: f1fbe3b765d234bbfa96a151892b338a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157599242441633726, guid: f1fbe3b765d234bbfa96a151892b338a,
+        type: 3}
+      propertyPath: m_Name
+      value: GameOverBG
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1fbe3b765d234bbfa96a151892b338a, type: 3}
 --- !u!1001 &2740284900719372026
 PrefabInstance:
   m_ObjectHideFlags: 0
