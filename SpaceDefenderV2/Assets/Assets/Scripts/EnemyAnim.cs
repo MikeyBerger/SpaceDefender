@@ -38,7 +38,7 @@ public class EnemyAnim : MonoBehaviour
 
         if(collision.transform.gameObject.tag == "Bullet")
         {
-            Debug.Log("Color Should Change!!!");
+            //Debug.Log("Color Should Change!!!");
             SR.sharedMaterial = DamageMat;
             StartCoroutine(ResetColor());
             HitCount = HitCount + 1;

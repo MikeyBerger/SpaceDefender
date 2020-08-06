@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5197120797498982254}
   - component: {fileID: 7553647614315995318}
   - component: {fileID: 3038818376168029808}
+  - component: {fileID: 2785850526314871395}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy2
@@ -111,7 +112,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4795207929291387998}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3c6247d8473b461a840a1edcbc8a6f2, type: 3}
   m_Name: 
@@ -184,6 +185,26 @@ MonoBehaviour:
   DefaultMat: {fileID: 2100000, guid: c4a717899f2c040e1b65af84bee1fbd4, type: 2}
   ChangeTimer: 1
   HitCount: 0
+--- !u!114 &2785850526314871395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795207929291387998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f70b64afe5d40119da87a0f57cb28c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShootPoint: {fileID: 4795207930078563021}
+  Bullet1: {fileID: 7146061214037422529, guid: 0c5314d1160304b99bd6b253c106f916, type: 3}
+  Bullet2: {fileID: 3655203494863565118, guid: b2b6eeaab02a543b0bc8d7765cb18453, type: 3}
+  Speed: 2
+  FireRate: 0
+  FireRateLimit: 400
+  StopDistance: 1.5
+  HasStopped: 0
 --- !u!1 &4795207930078563018
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,8 +24,6 @@ public class Weapon : MonoBehaviour
     public int Enemy2HitCount;
     private Transform Target;
     public int TargetHitCount;
-    private Enemy1 E1;
-    private Enemy2 E2;
     public Transform ShotMusic;
 
 
@@ -47,8 +45,7 @@ public class Weapon : MonoBehaviour
 
     private void Awake()
     {
-        E1 = GameObject.FindGameObjectWithTag("Enemy1").GetComponent<Enemy1>();
-        E2 = GameObject.FindGameObjectWithTag("Enemy2").GetComponent<Enemy2>();
+
     }
 
     // Start is called before the first frame update
@@ -80,17 +77,7 @@ public class Weapon : MonoBehaviour
             }
         }
 
-        #region No Target
-        if (E1 == null)
-        {
-            E1 = null;
-        }
 
-        if(E2 == null)
-        {
-            E2 = null;
-        }
-        #endregion
     }
 
 

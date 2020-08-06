@@ -7,6 +7,8 @@ public class SpawnScript : MonoBehaviour
     public float SpawnTimer = 0;
     public float SpawnLimit;
     public float StopTime;
+    public float MinusTime;
+    public float DefaultTime;
     public bool WaveIsOver = false;
     public float WaveNum = 1;
     public GameObject[] Enemies;
@@ -17,11 +19,22 @@ public class SpawnScript : MonoBehaviour
     public int MaxPoint;
 
 
-    IEnumerator StopWave()
+    IEnumerator Waves()
     {
-        yield return new WaitForSeconds(WaveNum);
+        //Instantiate(Enemies[RandEnemy], SpawnPoints[RandPoint].position, Quaternion.identity);
+        yield return new WaitForSeconds(StopTime);
+        if (WaveIsOver == false)
+        {
+            Instantiate(Enemies[RandEnemy], SpawnPoints[RandPoint].position, Quaternion.identity);
+            WaveIsOver = true;
+            StopTime = StopTime - MinusTime;
+        }
+        /*
         Instantiate(Enemies[RandEnemy], SpawnPoints[RandPoint].position, Quaternion.identity);
         WaveIsOver = false;
+        StopTime = StopTime + AddTime;
+        //SpawnTimer = 0;
+        */
     }
 
     // Start is called before the first frame update
@@ -37,21 +50,28 @@ public class SpawnScript : MonoBehaviour
         RandEnemy = Random.Range(0, 2);
         RandPoint = Random.Range(MinPoint, MaxPoint);
 
-        if(SpawnTimer >= SpawnLimit && WaveIsOver == false)
+        if(WaveIsOver == true)
         {
-            StartCoroutine(StopWave());
+            SpawnTimer++;
         }
+
+        if (SpawnTimer >= SpawnLimit)
+        {
+            WaveIsOver = false;
+        }
+
+        if (StopTime <= 0)
+        {
+            StopTime = DefaultTime;
+        }
+
+        StartCoroutine(Waves());
 
         if(GameObject.FindGameObjectsWithTag("Enemy1").Length == 0 && GameObject.FindGameObjectsWithTag("Enemy2").Length == 0)
         {
-            WaveIsOver = true;
-            WaveNum = WaveNum + .2f;
-            SpawnTimer = 0;
+            WaveIsOver = false;
+            //SpawnTimer = 0;
         }
 
-        if(WaveNum <= 0)
-        {
-            WaveNum = 1;
-        }
     }
 }

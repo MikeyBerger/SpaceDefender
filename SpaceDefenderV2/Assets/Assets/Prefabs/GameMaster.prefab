@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 117296172647986435}
   - component: {fileID: 117296172647986434}
+  - component: {fileID: 1529208832305843626}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -44,3 +45,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverScene: GameOver
+--- !u!114 &1529208832305843626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117296172647986433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8349c93a9dc45fb92e1139e3b5c0d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemies:
+  - {fileID: 1583718049631342907, guid: b45524da8905f4843988c6a48531f6bf, type: 3}
+  - {fileID: 4795207929291387998, guid: 19833c8fae4724f6bb3952e185db8a13, type: 3}
+  SpawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  StopSpawning: 0
+  MinSpawnTime: 1
+  MaxSpawnTime: 2.5
+  MinDelayTime: 1
+  MaxDelayTime: 2.5
