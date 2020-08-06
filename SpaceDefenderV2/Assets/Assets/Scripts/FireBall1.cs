@@ -23,7 +23,13 @@ public class FireBall1 : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, TargetVector, Speed * Time.deltaTime);
-        
+
+
+        if (Target == null)
+        {
+            Destroy(transform.gameObject);
+        }
+
     }
 
     /*

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameMaster : MonoBehaviour
 {
     private Transform Tower1;
-    private Transform Tower2;
+    //private Transform Tower2;
     public string GameOverScene;
 
 
@@ -14,7 +14,7 @@ public class GameMaster : MonoBehaviour
     void Start()
     {
         Tower1 = GameObject.FindGameObjectWithTag("Tower1").GetComponent<Transform>();
-        Tower2 = GameObject.FindGameObjectWithTag("Tower2").GetComponent<Transform>();
+        //Tower2 = GameObject.FindGameObjectWithTag("Tower2").GetComponent<Transform>();
 
     }
 
@@ -23,7 +23,7 @@ public class GameMaster : MonoBehaviour
     {
        
 
-        if(Tower1 == null && Tower2 == null)
+        if(Tower1 == null)
         {
             //Debug.LogError("IT'S GAME OVER MAN!!");
             SceneManager.LoadScene(GameOverScene);

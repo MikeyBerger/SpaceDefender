@@ -11,7 +11,7 @@ public class FireBall2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Target = GameObject.FindGameObjectWithTag("Tower2").GetComponent<Transform>();
+        Target = GameObject.FindGameObjectWithTag("Tower1").GetComponent<Transform>();
         TargetVector = new Vector2(Target.position.x, Target.position.y);
     }
 
@@ -19,6 +19,11 @@ public class FireBall2 : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, TargetVector, Speed * Time.deltaTime);
+
+        if(Target == null)
+        {
+            Destroy(transform.gameObject);
+        }
         
     }
 }

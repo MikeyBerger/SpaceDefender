@@ -17,7 +17,8 @@ public class Enemy2 : MonoBehaviour
     public Transform Bullet;
     public Transform Target;
     public float WaitTime;
-    // public bool HasStopped;
+    public bool HasStopped;
+   
 
 
     IEnumerator Shoot()
@@ -30,13 +31,9 @@ public class Enemy2 : MonoBehaviour
     void Start()
     {
     
-        Target = GameObject.FindGameObjectWithTag("Tower2").GetComponent<Transform>();
+        Target = GameObject.FindGameObjectWithTag("Tower1").GetComponent<Transform>();
 
-        if(Target == null)
-        {
-            Target = GameObject.FindGameObjectWithTag("Tower1").GetComponent<Transform>();
-            Target = null;
-        }
+
      
     }
 
@@ -45,10 +42,22 @@ public class Enemy2 : MonoBehaviour
     {
         Damage = Random.Range(MinDamage, MaxDamage);
 
+
+        if (Target == null)
+        {
+            Destroy(transform.gameObject);
+        }
+
+
         if (Health <= 0)
         {
             Destroy(transform.gameObject);
         }
+
+
+
+
+
 
         FireRate++;
 
@@ -59,7 +68,11 @@ public class Enemy2 : MonoBehaviour
         else if (Vector2.Distance(transform.position, Target.position) < StopDistance && Target != null)
         {
             transform.position = transform.position;
-           //HasStopped = true;
+            //HasStopped = true;
+        }
+        else
+        {
+            Destroy(transform.gameObject);
         }
 
 
@@ -70,11 +83,14 @@ public class Enemy2 : MonoBehaviour
             FireRate = 0;
         }
 
-        
+
+
+
 
 
     }
 
+    #region Not In Use
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Sparks")
@@ -90,5 +106,8 @@ public class Enemy2 : MonoBehaviour
             Debug.Log("Enemy2 Hit");
         }
     }
+    #endregion
+
+
 
 }

@@ -16,7 +16,8 @@ public class Enemy1 : MonoBehaviour
     public Transform Bullet;
     public Transform Target;
     public float WaitTime;
-    // public bool HasStopped;
+    public bool HasStopped;
+   
 
     IEnumerator Shoot()
     {
@@ -29,11 +30,7 @@ public class Enemy1 : MonoBehaviour
     {
         
         Target = GameObject.FindGameObjectWithTag("Tower1").GetComponent<Transform>();
-        if(Target == null)
-        {
-            Target = GameObject.FindGameObjectWithTag("Tower2").GetComponent<Transform>();
-            Target = null;
-        }
+
         
     }
 
@@ -42,10 +39,20 @@ public class Enemy1 : MonoBehaviour
     {
         Damage = Random.Range(MinDamage, MaxDamage);
 
+
+
+
         if (Health <= 0)
         {
             Destroy(transform.gameObject);
         }
+
+
+        if (Target == null)
+        {
+            Destroy(transform.gameObject);
+        }
+
 
         FireRate++;
 
@@ -66,8 +73,22 @@ public class Enemy1 : MonoBehaviour
             FireRate = 0;
         }
 
+        if (EnemiesAreAlive())
+        {
+            Debug.ClearDeveloperConsole();
+            //Target = GameObject.FindGameObjectWithTag("Tower2").GetComponent<Transform>();
+
+        }
+
+
+
+
     }
 
+
+
+
+    #region Not In Use
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Sparks")
@@ -83,6 +104,22 @@ public class Enemy1 : MonoBehaviour
             Debug.Log("Enemy1 Hit");
         }
     }
+
+
+    bool EnemiesAreAlive()
+    {
+
+        if (GameObject.FindGameObjectWithTag("Tower1").GetComponent<Transform>() == null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+
+    }
+    #endregion
 
 
 }
