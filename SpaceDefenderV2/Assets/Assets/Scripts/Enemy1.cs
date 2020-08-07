@@ -63,6 +63,9 @@ public class Enemy1 : MonoBehaviour
         {
             transform.position = transform.position;
             //HasStopped = true;
+        }else
+        {
+            Destroy(transform.gameObject);
         }
 
 

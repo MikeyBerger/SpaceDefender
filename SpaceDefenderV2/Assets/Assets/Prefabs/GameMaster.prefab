@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 117296172647986435}
   - component: {fileID: 117296172647986434}
   - component: {fileID: 1529208832305843626}
+  - component: {fileID: 1533979279307601585}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -67,5 +68,31 @@ MonoBehaviour:
   StopSpawning: 0
   MinSpawnTime: 1
   MaxSpawnTime: 2.5
-  MinDelayTime: 1
-  MaxDelayTime: 2.5
+  MinDelayTime: 10
+  MaxDelayTime: 15
+--- !u!114 &1533979279307601585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117296172647986433}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff1bdbc2c71e4033ad7494dd4419718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawners:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Enemy: {fileID: 1583718049631342886, guid: b45524da8905f4843988c6a48531f6bf, type: 3}
+  DefaultDelay: 1
+  RegDelay: 10

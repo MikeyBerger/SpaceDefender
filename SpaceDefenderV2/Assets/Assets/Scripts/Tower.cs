@@ -7,18 +7,21 @@ public class Tower : MonoBehaviour
     public int Health;
     private int Damage;
     public Transform Explosion;
+    public Transform ForceField;
+    public Transform ForceFieldPoint;
     public float RestorationTimer;
     private int RegenHealth;
     public int MaxRegen;
     public int MinRegen;
     public int MaxDamage;
     public int MinDamage;
+    public float ForceFieldEnergy;
     public HealthBarScript HBS;
 
-    IEnumerator RestoreHealth()
+    IEnumerator RestoreForceField()
     {
         yield return new WaitForSeconds(RestorationTimer);
-        Health = Health + RegenHealth;
+        ForceFieldEnergy++;
     }
 
 
@@ -39,8 +42,25 @@ public class Tower : MonoBehaviour
         {
             Destroy(transform.gameObject);
         }
+        /*
+        if(Health < 100)
+        {
+            StartCoroutine(RestoreHealth());
+        }
+        */
 
-        StartCoroutine(RestoreHealth());
+        if (Input.GetMouseButton(1) && ForceFieldEnergy != 0)
+        {
+            Instantiate(ForceField, ForceFieldPoint.position, ForceFieldPoint.rotation);
+            ForceFieldEnergy -= Time.deltaTime;
+        }
+        else if (Input.GetMouseButton(1) && ForceFieldEnergy == 0)
+        {
+            //Logic goes here
+            //May need to change where to put this script
+        }
+
+        
     }
 
     /*

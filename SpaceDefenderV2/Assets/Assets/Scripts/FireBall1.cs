@@ -32,14 +32,26 @@ public class FireBall1 : MonoBehaviour
 
     }
 
-    /*
+    #region Triggers and Collisions
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.transform.tag == "Tower1")
+        if(collision.gameObject.transform.tag == "ForceField")
         {
             Debug.Log("Tower1 was hit");
+            Destroy(transform.gameObject);
         }
 
     }
-    */
+    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "ForceField")
+        {
+            Debug.Log("ForceField Breached!!");
+            Destroy(transform.gameObject);
+        }
+    }
+    #endregion
+
 }

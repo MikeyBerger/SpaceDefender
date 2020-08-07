@@ -42,6 +42,8 @@ public class SpawnScriptV3 : MonoBehaviour
     void StartSpawning()
     {
         Instantiate(Enemies[RandEnemy], SpawnPoints[RandPoint].position, Quaternion.identity);
+        Instantiate(Enemies[RandEnemy], SpawnPoints[RandPoint].position, Quaternion.identity);
+        Instantiate(Enemies[RandEnemy], SpawnPoints[RandPoint].position, Quaternion.identity);
         if (StopSpawning)
         {
             CancelInvoke("StartSpawning");
