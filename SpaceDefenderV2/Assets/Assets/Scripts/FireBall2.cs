@@ -19,8 +19,9 @@ public class FireBall2 : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, TargetVector, Speed * Time.deltaTime);
+        transform.LookAt(transform.position, Target.position);
 
-        if(Target == null)
+        if (Target == null)
         {
             Destroy(transform.gameObject);
         }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireBall1 : MonoBehaviour
 {
     public float Speed;
+    public float LookSpeed;
     public Transform Target;
     private Vector2 TargetVector;
     
@@ -23,7 +24,7 @@ public class FireBall1 : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, TargetVector, Speed * Time.deltaTime);
-
+        transform.LookAt(transform.position, Target.position);
 
         if (Target == null)
         {
